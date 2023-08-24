@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -15,4 +16,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "ExampleProject"
 include(":app")
- 
+include(":core-network")
+include(":core-local-storage")
+include(":core-data")
+include(":core-model")
+include(":core-theme")

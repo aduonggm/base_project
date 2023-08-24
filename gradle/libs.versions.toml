@@ -2,7 +2,17 @@
 androidCoreKtxVersion = "1.10.1"
 composeBomVersion = "2023.08.00"
 andoridGradlePluginVersion = "8.1.0"
+androidGradlePlugin = "8.0.2"
+libraryGradlePluginVersion = "7.1.1"
 kotlinGradlePluginVersion = "1.8.10"
+kotlinAndroid = "1.8.0"
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+appcompat = "1.6.1"
+material = "1.9.0"
+hiltVersion = "2.44"
+hiltPlugin = "2.44"
 
 
 [libraries]
@@ -12,11 +22,20 @@ compose-ui-ui = { module = "androidx.compose.ui:ui" }
 compose-graphics = { module = "androidx.compose.ui:ui-graphics" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 compose-material3 = { module = "androidx.compose.material3:material3" }
-
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin: kotlin-gradle-plugin", version.ref = "kotlinAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltVersion" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltVersion" }
 [bundles]
 composeLibs = ["compose-ui-ui", "compose-graphics", "compose-material3", "compose-ui-tooling-preview"]
 
 [plugins]
 android-gradle-plugin = { id = "com.android.application", version.ref = "andoridGradlePluginVersion" }
 kotlin-gradle-plugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinGradlePluginVersion" }
-
+com-android-library = { id = "com.android.library", version.ref = "libraryGradlePluginVersion" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltPlugin" }
